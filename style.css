@@ -1,10 +1,18 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Kufam&family=Secular+One&display=swap');
 
+:root {
+    --primary: #00c3ff;
+    --secundary: #7848fe;
+    --dark: #212121;
+    --light: #f3f3f3;
+    --purple: #6E2A7D;
+}
+
 body {
     margin: 0px;
     font-family: 'Kufam', sans-serif;
-    background-color: #161B22;
+    background-color: var(--light);
 }
 
 .container {
@@ -13,23 +21,28 @@ body {
 }
 
 header {
-    color: white;
-    background-color: #0D1117;
-    padding: 1px 0px;
+    color: var(--light);
+    background-color: var(--dark);
+    padding: 5px 0px;
     margin: 0px;
     justify-content: space-between;
+    box-shadow: 0px 3px 18px 12px rgba(0, 0, 0, 0.2);
+}
+
+.header-area img {
+    cursor: pointer;
 }
 
 a:link, a:visited {
     text-decoration: none;
-    color: white;
+    color: var(--light);
 }
 
 .header-area {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 15px;
+    padding: 0px;
 }
 
 .header-image {
@@ -45,23 +58,22 @@ a:link, a:visited {
 }
 
 .header-links a:hover {
-    color: #6E2A7D;
+    color: var(--purple);
 }
 
 #banner {
-    background-color: #0D1117;
+    background-color: var(--dark);
     max-height: 450px;
     margin: 0px;
     width: auto;
-    border-radius: 0px 0px 0px 150px;
-    box-shadow: #0e1216;
+    border-radius: 0px 0px 100px 100px;
     display: flex;
+    padding: 150px 5px 70px 5px;
 }
 
 .banner-desc {
     display: flex;
     justify-content: space-between;
-    padding: 40px 5px 0px 5px;
     align-items: center;
 }
 
@@ -72,7 +84,7 @@ a:link, a:visited {
     margin: 0px 0px 0px 40px;
     font-family: 'Kufam', sans-serif;
     font-size: 20px;
-    color: white;
+    color: var(--light);
     
 }
 
@@ -90,10 +102,10 @@ a:link, a:visited {
     border-radius: 10px;
     margin: 20px 0px 100px 0px;
     padding: 8px;
-    color: white;
-    background-color: #6E2A7D;
+    color: var(--light);
+    background-color: var(--purple);
     width: 250px;
-    box-shadow: 0px 7px 0px #43194d;
+    box-shadow: 0px 7px 0px #461b50;
 }
 
 .banner-logo {
@@ -101,30 +113,61 @@ a:link, a:visited {
     margin: 0px 100px 100px 0px;
 }
 
-article {
-    margin: 100px 0px 0px 40px;
-    padding: 50px;
-    display: flex;
-    justify-content: space-between;
-    gap: 60px;
-    color: white;
+.card {
+    width: 300px;
+    height: 400px;
+    perspective: 1000px;
 }
 
-.artigo-button {
-    padding: 30px;
-    width: 400px;
-    border-radius: 30px;
-    background-color: #0D1117;
+.card__inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+}
+
+.card__inner.is-flipped {
+    transform: rotateY(180deg);
+}
+
+.card__face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 16px;
+    box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
+}
+
+.card__face__front {
+    background-image: linear-gradient(to bottom right, var(--primary), var(--secundary));
+    display: flex;
+    align-items: center;
     text-align: center;
 }
 
-.artigo-button > p{
-    padding: 15px;
+.card__face__front h2 {
+    color: white;
+    font-size: 32px;
 }
 
-.artigo-title {
-    font-family: 'Secular One', sans-serif;
-    font-size: 26px;
-    color: #6E2A7D;
+.card__face__back {
+    background-color: var(--light);
+    transform: rotateY(180deg);
+}
+
+.card__body {
+    padding: 30px;
+}
+
+.card__body h2 {
+    color: var(--dark);
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-transform: uppercase;
     text-align: center;
 }
