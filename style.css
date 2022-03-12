@@ -23,8 +23,10 @@ body {
 header {
     color: var(--light);
     background-color: var(--dark);
+
     padding: 5px 0px;
     margin: 0px;
+
     justify-content: space-between;
     box-shadow: 0px 3px 18px 12px rgba(0, 0, 0, 0.2);
 }
@@ -51,8 +53,10 @@ a:link, a:visited {
     
 .header-links {
     list-style: none;
+
     font-family: 'Secular One', sans-serif;
     font-size: 22px;
+
     display: flex;
     gap: 50px;
 }
@@ -64,11 +68,12 @@ a:link, a:visited {
 #banner {
     background-color: var(--dark);
     max-height: 450px;
-    margin: 0px;
     width: auto;
     border-radius: 0px 0px 100px 100px;
     display: flex;
+    
     padding: 150px 5px 70px 5px;
+    margin: 0px;
 }
 
 .banner-desc {
@@ -82,6 +87,7 @@ a:link, a:visited {
     flex-direction: column;
     width: 500px;
     margin: 0px 0px 0px 40px;
+
     font-family: 'Kufam', sans-serif;
     font-size: 20px;
     color: var(--light);
@@ -91,6 +97,7 @@ a:link, a:visited {
 .banner-title {
     font-family: 'Secular One', sans-serif;
     font-size: 48px;
+
     padding: 0px;
     margin: 0px;
 }
@@ -99,13 +106,15 @@ a:link, a:visited {
     font-family: 'Secular One', sans-serif;
     font-size: 22px;
     text-align: center;
-    border-radius: 10px;
+    color: var(--light);
+
     margin: 20px 0px 100px 0px;
     padding: 8px;
-    color: var(--light);
+    
     background-color: var(--purple);
     width: 250px;
     box-shadow: 0px 7px 0px #461b50;
+    border-radius: 10px;
 }
 
 .banner-logo {
@@ -172,3 +181,7 @@ a:link, a:visited {
     text-align: center;
 }
 
+#cards {
+    display: flex;
+    flex-direction: row;
+}
