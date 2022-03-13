@@ -156,6 +156,7 @@ a:link, a:visited {
     background-image: linear-gradient(to bottom right, var(--primary), var(--secundary));
     display: flex;
     align-items: center;
+    justify-content: center;
     text-align: center;
 }
 
