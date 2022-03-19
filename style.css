@@ -31,7 +31,7 @@ header {
     color: var(--light);
     background-color: var(--dark);
 
-    padding: 5px 0px;
+    padding: 10px 10px;
     margin: 0px;
 
     box-shadow: 0px 3px 18px 12px rgba(0, 0, 0, 0.2);
@@ -39,6 +39,7 @@ header {
 
 .header-area {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 0px;
@@ -64,6 +65,7 @@ a:link, a:visited {
     font-size: 22px;
 
     display: flex;
+    flex-direction: row;
     gap: 50px;
 }
 
@@ -78,7 +80,7 @@ a:link, a:visited {
     border-radius: 0px 0px 100px 100px;
     display: flex;
     
-    padding: 150px 5px 70px 5px;
+    padding: 100px 5px 150px 5px;
     margin: 0px;
 }
 
@@ -86,15 +88,15 @@ a:link, a:visited {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0px 40px;
 }
 
 .banner-info {
     display: flex;
     flex-direction: column;
     width: 500px;
-    margin: 0px 0px 0px 40px;
+    gap: 30px;
 
-    font-family: 'Kufam', sans-serif;
     font-size: 20px;
     color: var(--light);
     
@@ -114,25 +116,26 @@ a:link, a:visited {
     text-align: center;
     color: var(--light);
 
-    margin: 20px 0px 100px 0px;
+    margin: 0px;
     padding: 8px;
+    cursor: pointer;
     
-    background-color: var(--purple);
+    background-image: linear-gradient(to bottom right, var(--primary), var(--secundary));
     width: 250px;
-    box-shadow: 0px 7px 0px #461b50;
+    box-shadow: 0px 7px 0px rgb(31, 36, 88);
     border-radius: 10px;
 }
 
 .banner-logo {
     width: 30%;
-    margin: 0px 100px 100px 0px;
+    margin: 0px;
 }
 
 .card {
     width: 300px;
     height: 400px;
     perspective: 1000px;
-    margin: 50px 20px 0px 20px;
+    margin: 50px 30px 0px 30px;
 }
 
 .card__area {
@@ -172,6 +175,8 @@ a:link, a:visited {
 }
 
 .card__face__front h2 {
+    font-family: 'Secular One', sans-serif;
+    font-weight: 300;
     color: white;
     font-size: 32px;
 }
