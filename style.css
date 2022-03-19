@@ -129,8 +129,9 @@ a:link, a:visited {
 }
 
 .banner-logo {
-    width: 30%;
+    width: 40%;
     margin: 0px;
+    border-radius: 10px;
 }
 
 .card {
@@ -234,6 +235,7 @@ a:link, a:visited {
 .artigo img {
     border-radius: 30px;
     border: 3px solid var(--primary);
+    cursor: pointer;
 }
 
 .artigo-info {
