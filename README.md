@@ -1,3 +1,3 @@
 # Site Android!
 
-Esse projeto está sendo criado durante um curso de HTML5 e CSS3!
+Projeto de Site contando a história do mascote do Android
