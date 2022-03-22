@@ -141,13 +141,6 @@ a:link, a:visited {
     margin: 0px 30px 0px 30px;
 }
 
-.card2 {
-    width: 300px;
-    height: 350px;
-    perspective: 1000px;
-    margin: 0px 30px 0px 30px;
-}
-
 .card__area {
     display: flex;
     justify-content: center;
@@ -174,6 +167,10 @@ a:link, a:visited {
 
 
 .card__inner.is-flipped {
+    transform: rotateY(180deg);
+}
+
+.card__inner2.is-flipped {
     transform: rotateY(180deg);
 }
 
@@ -205,7 +202,8 @@ a:link, a:visited {
 .card__face__back {
     background-color: var(--light);
     transform: rotateY(180deg);
-    font-size: 16px;
+    font-size: 14px;
+    text-align: center;
 }
 
 .card__body {
@@ -213,8 +211,8 @@ a:link, a:visited {
 }
 
 .card__body h2 {
-    color: var(--dark);
-    font-size: 14px;
+    color: var(--darkblue);
+    font-size: 18px;
     font-weight: 600;
     margin-bottom: 15px;
     text-transform: uppercase;
