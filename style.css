@@ -1,13 +1,6 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Kufam&family=Secular+One&display=swap');
 
-@media (max-width: 1200px) {
-    .container {
-        max-width: 800px;
-        margin: 0 auto;
-    }
-}
-
 :root {
     --primary: #00c3ff;
     --secundary: #7848fe;
@@ -141,24 +134,6 @@ a:link, a:visited {
     border-radius: 10px;
 }
 
-.container-logo img{
-    width: 170px;
-    position: absolute;
-    opacity: 15%;
-}
-
-.container-logo1 {
-    top: 800px;
-    left: 100px;
-    transform: rotate(-20deg);
-}
-
-.container-logo2 {
-    top: 1400px;
-    left: 1650px;
-    transform: rotate(20deg);
-}
-
 .card {
     width: 300px;
     height: 350px;
@@ -248,10 +223,9 @@ a:link, a:visited {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 200px;
     margin: 0px 30px 130px 30px;
     padding: 50px 0px 0px 0px;
-
+    gap: 200px;
     border-top: 2px solid var(--primary);
 }
 
@@ -304,4 +278,42 @@ footer > p > a {
 footer > p > a:hover {
     color: var(--primary);
     font-weight: 800;
+}
+
+@media (max-width: 480px) {
+    .header-area img{
+        width: 15%;
+    }
+    
+    .header-links a li {
+        display: none;
+    }
+
+    #banner {
+        padding: 30px 5px 100px 5px;
+    }
+    .banner-desc h1 {
+        font-size: 38px;
+    }
+
+    .banner-info {
+        max-width: 300px;
+    }
+    .banner-logo {
+        display: none;
+    }
+    .card__area {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+    
+    .artigo {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .artigo-info {
+        max-width: 300px;
+    }
 }
