@@ -1,6 +1,13 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Kufam&family=Secular+One&display=swap');
 
+@media (max-width: 1200px) {
+    .container {
+        background-color: red;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}
 
 :root {
     --primary: #00c3ff;
@@ -15,6 +22,7 @@
 
 * {
     margin: 0;
+    padding: 0;
 }
 
 body {
@@ -132,6 +140,24 @@ a:link, a:visited {
     width: 40%;
     margin: 0px;
     border-radius: 10px;
+}
+
+.container-logo img{
+    width: 170px;
+    position: absolute;
+    opacity: 15%;
+}
+
+.container-logo1 {
+    top: 800px;
+    left: 100px;
+    transform: rotate(-20deg);
+}
+
+.container-logo2 {
+    top: 1400px;
+    left: 1650px;
+    transform: rotate(20deg);
 }
 
 .card {
