@@ -15,6 +15,7 @@
 * {
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -34,8 +35,6 @@ header {
 
     padding: 10px 10px;
     margin: 0px;
-
-    box-shadow: 0px 3px 18px 12px rgba(0, 0, 0, 0.2);
 }
 
 .header-area {
@@ -76,7 +75,6 @@ a:link, a:visited {
 
 #banner {
     background-color: var(--dark);
-    max-height: 450px;
     width: auto;
     border-radius: 0px 0px 100px 100px;
     display: flex;
@@ -135,7 +133,7 @@ a:link, a:visited {
 }
 
 .card {
-    width: 300px;
+    width: 250px;
     height: 350px;
     perspective: 1000px;
     margin: 0px 30px 0px 30px;
@@ -202,7 +200,7 @@ a:link, a:visited {
 .card__face__back {
     background-color: var(--light);
     transform: rotateY(180deg);
-    font-size: 14px;
+    font-size: 13px;
     text-align: center;
 }
 
@@ -211,31 +209,35 @@ a:link, a:visited {
 }
 
 .card__body h2 {
+    font-family: 'Secular One', sans-serif;
     color: var(--darkblue);
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 300;
     margin-bottom: 15px;
     text-transform: uppercase;
     text-align: center;
 }
 
-.artigo {
+.artigo-desc1 {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
-    margin: 0px 30px 130px 30px;
-    padding: 50px 0px 0px 0px;
-    gap: 200px;
+
+    padding-top: 100px;
+    margin-bottom: 150px;
+
     border-top: 2px solid var(--primary);
+    border-top-left-radius: 5%;
 }
 
-.artigo img {
+.artigo-desc1 img {
     border-radius: 30px;
     border: 3px solid var(--primary);
     cursor: pointer;
 }
 
-.artigo-info {
+.artigo-info1 {
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -243,17 +245,81 @@ a:link, a:visited {
     text-align: center;
 }
 
-.artigo-info h2{
+.artigo-info1 h2{
+    font-family: 'Secular One', sans-serif;
+    font-weight: 300;
     color: var(--darkblue);
 }
 
-.artigo-info p a{
+.artigo-info1 p a{
     color: var(--dark);
     font-weight: 800;
 }
 
-.artigo-info p a:hover {
+.artigo-info1 p a:hover {
     color: var(--darkblue);
+}
+
+.artigo-desc2 {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+
+    margin-bottom: 150px;
+}
+
+.artigo-desc2 p {
+    width: 500px;
+}
+
+.artigo-desc2 img {
+    width: 25%;
+}
+
+.curiosidade-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    padding-top: 100px;
+    margin-bottom: 150px;
+
+    border-top: 2px solid var(--primary);
+    border-top-left-radius: 5%;
+}
+
+.curiosidade-area img {
+    width: 25%;
+}
+
+.curiosidade-desc {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+    width: 500px;
+}
+
+.curiosidade-info {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    list-style: none;
+    gap: 30px;
+}
+
+.curiosidade-info h2{
+    font-family: 'Secular One', sans-serif;
+    font-weight: 300;
+    color: var(--darkblue);
+}
+
+.curiosidade-desc ul {
+    text-align: center;
+    list-style: none;
+    cursor: pointer;
 }
 
 footer {
@@ -290,7 +356,8 @@ footer > p > a:hover {
     }
 
     #banner {
-        padding: 30px 5px 100px 5px;
+        height: 400px;
+        padding: 100px 5px 100px 5px;
     }
     .banner-desc h1 {
         font-size: 38px;
